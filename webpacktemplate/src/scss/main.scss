@@ -1,0 +1,156 @@
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+$maincolor: #2A363B;
+body {
+    margin: 0;
+}
+
+/*-------------------HEADER----------------------*/
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background: $maincolor; 
+}
+
+.top_logo{
+    top: 8px;
+    position: absolute;
+    width: 310px;
+    height: 48px;
+}
+.logo {
+    height: 100%;
+}
+
+/*----------------modal_button_login-----------------*/
+
+.topcorner{
+    position:absolute;
+    top:0;
+    right:0px;
+}
+
+.login {
+    -webkit-appearance: none;
+    border: transparent;
+    background: #2A363B;
+    position: absolute;
+    width: 97px;
+    height: 64px;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: 127px;
+    color: white;
+}
+
+
+.login:hover {
+    color: #CD465A; 
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:  #2A363B;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: #FFFFFF;
+}
+
+.close-button:hover {
+    background-color: #CD465A;;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/*--------------------------------Flexbox for login form----------------------------------*/
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+}
+
+                      /*-------------rectangle image-------------*/
+
+.box-img {
+    margin-left:120px;
+    margin-bottom:50px;
+}
+
+.box-login {
+    margin-top: 10px;
+    margin-left:140px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input {
+    border-left: 1px solid rgba(238, 238, 238, 0.2);
+    width:250px; 
+    margin-top: 20px;
+margin-left: 70px;
+background-color: #2A363B;
+border: 1px solid rgba(238, 238, 238, 0.2);
+border-radius: 4px;
+height: 30px;
+color: #999999;
+}
+
+.input:focus {
+    outline:none;
+    border-color: #E84A5F; 
+}
+
+.fields {
+    display: flex;
+    flex-direction: row;
+}
+
+.fa {
+    color: #FFFFFF;
+}
