@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/dist/app.css">
+        <title>HackAcademy</title>
+    </head>
+    <header>
+        <div class="top_logo">
+            <img class="top_logo-logo" src="/src/images/logo_text.png"></img>
+        </div>
+    </header>
+    <body>
+        <script src="/src/js/rexec.js"></script>
+        <button class="trigger1 topcorner login" onclick="openLoginForm()">LOGIN</button>
+        <div class="main_box">
+            <div class="main_box-modal">
+                <div id="login" class="main_box-modal-content d-none">
+                    <span class="main_box-modal-content-close_button" onclick="closeModal()">&times;</span>
+                    <div class="main_box-modal-content-rectangle"><img src="/src/images/rectangle.png"></img></div>
+                    <div class="main_box-modal-content-title">
+                        LOGIN
+                    </div>
+                    <div class="main_box-modal-content-container">
+                        <input class="main_box-modal-content-container-input" type="email" id="email" onfocusout=(validateInput()) placeholder="Email"><br>
+                        <input class="main_box-modal-content-container-input passwd" id="password" type="password" placeholder="Password" onfocusout=(validateInput()) required>
+                        <button class="forgot" id="forgot" onclick="openForgotPasswordForm()">Forgot password?</button>
+                        <p id="error_p">
+                            Your password has to be at least 8 characters long, must contain at least one lower case letter, one upper case letter, one digit and one of these special characters ~!@#$%^&*()_+
+                        </p>
+                    </div> <!--container-->
+                    <button type="submit" id="login2" disabled>Login</button>
+                    <div class="main_box-modal-box2">
+                        <div><p>Do not have account? <button id="signup" onclick="openRegisterForm()">SIGNUP</button></p></div>
+                        <div class="main_box-modal-box2-or"><img src="/src/images/or.svg"></img></div>
+                        <div class="main_box-modal-box2-soc"><img src="/src/images/soc.svg"></img></div>
+                    </div>
+                </div> <!-- modal-content-->
+
+                <div id="forgot-password" class="main_box-modal-content d-none">
+                    <span class="main_box-modal-content-close_button" onclick="closeModal()">&times;</span>
+                    <div class="main_box-modal-content-rectangle"><img src="/src/images/rectangle.png"></img></div>
+                    <div class="main_box-modal-content-title">
+                        FORGOT PASSWORD
+                    </div>
+                    <input class="main_box-modal-content-container-input" type="email" id="email" onfocusout="validateReset(this, id)" placeholder="Email">
+                    <button type="submit" id="reset_pasword_button" disabled>
+                        Reset password
+                    </button>
+                    <div class="main_box-modal-box2">
+                        <div class="main_box-modal-box2-back_to_login">
+                            <p>Back to <button id="signup" onclick="openLoginForm()">LOGIN</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="register" class="main_box-modal-content d-none">
+                    <span class="main_box-modal-content-close_button" onclick="closeModal()">&times;</span>
+                    <div class="main_box-modal-content-rectangle"><img src="/src/images/rectangle.png"></img></div>
+                    <div class="main_box-modal-content-title">
+                        CREATE YOUR ACCOUNT
+                    </div>
+                    <div class="main_box-modal-content-container">
+                        <input class="main_box-modal-content-container-input" type="email" id="email-register" onfocusout=(validateInput()) placeholder="Email">
+                        <input class="main_box-modal-content-container-input passwd" id="password-register" type="password" placeholder="Password" onfocusout=(validateInput()) required>
+                        <p id="notmatch" > Passwords do not match!!! </p>
+                        <input class="main_box-modal-content-container-input passwd" id="password-register-confirm" type="password" placeholder="Confirm password" onfocusout=(validateInput()) required>
+                     <p id="error_p2" >
+                             Your password has to be at least 8 characters long, must contain at least one lower case letter, one upper case letter, one digit and one of these special         characters ~!@#$%^&*()_+
+                         </p>
+                    </div> <!--container-->
+
+                    <button type="submit" id="create_account" disabled>
+                        Create account
+                    </button>
+                    <div class="main_box-modal-box2">
+                        <p>Already have an account? <button id="signup"onclick="openLoginForm()">LOGIN</button></p>
+                    </div>
+                </div>
+
+            </div> <!--modal-->
+        </div> <!--main-box-->
+
+        <script src="/dist/app.js"></script>
+    </body>
+</html>
